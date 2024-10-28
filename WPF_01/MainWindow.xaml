@@ -1,0 +1,68 @@
+﻿<Window x:Class="WPF_01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_01"
+        mc:Ignorable="d"
+        Title="Option" Height="244" Width="384" Background="PaleGoldenrod">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <GroupBox Header="Draw" Margin="0,0,50,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <RadioButton >
+                    Draw one
+                </RadioButton>
+                <RadioButton Grid.Row="1" >
+                    Draw three
+                </RadioButton>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Scoring" Margin="0,0,50,0" Grid.Column="1" Grid.RowSpan="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <RadioButton>No scoring</RadioButton>
+                <RadioButton Grid.Row="1" >Standart scoring</RadioButton>
+                <RadioButton Grid.Row="2" >Vegas scoring</RadioButton>
+                <CheckBox Grid.Row="3" IsEnabled="False" >Cumulative</CheckBox>
+            </Grid>
+        </GroupBox>
+        <StackPanel Grid.Row="1" Grid.RowSpan="3">
+            <CheckBox Grid.Row="1" IsEnabled="False" IsChecked="True" >Display animations</CheckBox>
+            <CheckBox IsChecked="True" >Play sounds</CheckBox>
+            <CheckBox IsChecked="True" >Show tips</CheckBox>
+            <CheckBox >Always continue saved game</CheckBox>
+            <CheckBox >Always save game on exit</CheckBox>
+        </StackPanel>
+        <CheckBox Grid.Row="2" Grid.Column="1" IsChecked="True">Play sounds</CheckBox>
+        <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Width="100" HorizontalAlignment="Right" Margin="10">OK</Button>
+            <Button Grid.Column="1" Width="100" Margin="10">Cancel</Button>
+        </Grid>
+    </Grid>
+</Window>
